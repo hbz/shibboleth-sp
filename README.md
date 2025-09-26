@@ -47,7 +47,14 @@ sudo a2enmod proxy_http2
 ```
 6. Restart Apache2: `sudo systemctl restart apache2`
 
-## Configure Sibboleth SP and Shibboleth EDS
+## Configure certificate access
+
+1. Download DFN-AAI certificate: `wget https://www.aai.dfn.de/metadata/dfn-aai.pem`
+2. Move certificate to appropriate location: `sudo mkdir /etc/ssl/aai; mv ./dfn-aai.pem /etc/ssl/aai/`
+3. Make server certificate key readable for user shibd 
+
+## Configure Shibboleth SP and Shibboleth EDS
+
 
 
 
